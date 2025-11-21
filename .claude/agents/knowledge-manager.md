@@ -123,7 +123,7 @@ Knowledge Manager: Deleted .claude/knowledge/api-v1-documentation.md
 - Gets transcript links as sources
 - May be asked to retrieve knowledge for meeting preparation
 
-### HR Agent
+### Stakeholder Manager Agent
 - May collaborate on documenting client-specific processes
 - Can share knowledge about organizational structures
 - Provides procedural information when requested
@@ -185,5 +185,5 @@ Knowledge Manager: Deleted .claude/knowledge/api-v1-documentation.md
 
 - Knowledge Management Skill: `.claude/skills/knowledge-management/skill.md`
 - Meeting Management Skill: `.claude/skills/meeting-management/skill.md`
-- HR Agent: `.claude/agents/hr.md`
+- Stakeholder Manager Agent: `.claude/agents/stakeholder-manager.md`
 - Online Search Skill: `.claude/skills/online-search/skill.md` (future)

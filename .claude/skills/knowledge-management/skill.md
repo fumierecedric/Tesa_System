@@ -371,8 +371,8 @@ Context:
 - Source: [Strategy Meeting](.claude/meetings/transcripts/20251121-140000 Strategy-transcript.md)
 ```
 
-### HR Agent Integration
-HR Agent may trigger knowledge-management skill to:
+### Stakeholder Manager Agent Integration
+Stakeholder Manager Agent may trigger knowledge-management skill to:
 - Document client-specific processes
 - Create entries about organizational structures
 - Store important procedural information
@@ -426,4 +426,4 @@ Knowledge entry template: `.claude/skills/knowledge-management/templates/knowled
 
 - Knowledge Manager Agent: `.claude/agents/knowledge-manager.md` (future)
 - Meeting Management Skill: `.claude/skills/meeting-management/skill.md`
-- HR Agent: `.claude/agents/hr.md`
+- Stakeholder Manager Agent: `.claude/agents/hr.md`

@@ -31,7 +31,7 @@ Created: 2025-11-21
 
 ### Suggestions for Information Extraction
 
-- **Stakeholder Information (HR Agent)**
+- **Stakeholder Information (Stakeholder Manager Agent)**
   - Philippe Antoine: JMP founder, marketing transformation consultant, Tesa partner for 4 years
   - Jonas: Digital project lead based in Belgium, will work closely with consultant
   - European Marketing Director: Leads Tesa Europe marketing transformation
@@ -67,7 +67,7 @@ Created: 2025-11-21
 
 ### Suggestions for Information Extraction
 
-- **Stakeholder Information (HR Agent)**
+- **Stakeholder Information (Stakeholder Manager Agent)**
   - Jonas: Belgian-based digital project lead, key workshop co-organizer
 - **Knowledge Entries (Knowledge Manager Agent)**
   - Workshop format: Full afternoon December 3rd, optional December 4th continuation
@@ -100,7 +100,7 @@ Created: 2025-11-21
 
 ### Suggestions for Information Extraction
 
-- **Stakeholder Information (HR Agent)**
+- **Stakeholder Information (Stakeholder Manager Agent)**
   - Fumière Cédric: Consultant being onboarded for Tesa project
   - Hugues: Will provide onboarding to Cédric on November 21st
 - **Knowledge Entries (Knowledge Manager Agent)**

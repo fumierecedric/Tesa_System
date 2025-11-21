@@ -1,5 +1,7 @@
 # Execution Plan: Ticket 0006 - HR Agent Stakeholder Management
 
+> **Historical Note**: This plan was created for the original "HR Agent" implementation. The agent was later renamed to "Stakeholder Manager Agent" (see ticket 0015) to better reflect its broader role in managing stakeholder relationships.
+
 **Ticket:** 0006_Feature_HR_Agent_Stakeholder_Management
 **Created:** 2025-11-21
 **Status:** Completed

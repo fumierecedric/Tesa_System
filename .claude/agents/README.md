@@ -97,7 +97,7 @@ Each plan includes:
 
 **Use Cases**:
 - Extracting stakeholder information from meeting transcripts
-- Coordinating with HR agent for stakeholder file creation
+- Coordinating with Stakeholder Manager agent for stakeholder file creation
 - Preparing agendas for upcoming meetings based on previous discussions
 - Capturing knowledge items from technical or strategic meetings (placeholder)
 - Multi-agent coordination for meeting follow-up workflows
@@ -124,14 +124,14 @@ The Meeting Assistant processes transcript files from `.claude/meetings/transcri
 **Output**:
 
 Meeting Assistant coordinates multiple outputs:
-- Stakeholder files created via HR agent in `.claude/stakeholders/`
+- Stakeholder files created via Stakeholder Manager agent in `.claude/stakeholders/`
 - Meeting agendas with context and transcript links
 - Knowledge items documented (future: Knowledge Manager integration)
 - All outputs maintain traceability to source transcripts
 
-### HR Agent
+### Stakeholder Manager Agent
 
-**File**: [hr.md](hr.md)
+**File**: [stakeholder-manager.md](stakeholder-manager.md)
 
 **Purpose**: Manages stakeholder information and maintains comprehensive records of all interactions and key information.
 
@@ -148,7 +148,7 @@ Meeting Assistant coordinates multiple outputs:
 
 **How to Use**:
 
-The HR agent manages stakeholder files in `.claude/stakeholders/`. When you need to work with stakeholders:
+The Stakeholder Manager agent manages stakeholder files in `.claude/stakeholders/`. When you need to work with stakeholders:
 
 1. Provide stakeholder information (name, company, role, contact details)
 2. Agent creates or updates stakeholder files using standardized template
@@ -181,8 +181,8 @@ Each stakeholder file includes:
 ├── README.md              # This file
 ├── product-owner.md       # Product Owner agent configuration
 ├── solution-designer.md   # Solution Designer agent configuration
-├── meeting-assistant.md   # Meeting Assistant agent configuration
-└── hr.md                  # HR agent configuration
+├── meeting-assistant.md      # Meeting Assistant agent configuration
+└── stakeholder-manager.md    # Stakeholder Manager agent configuration
 ```
 
 ## Workflow Integration
@@ -216,7 +216,7 @@ For meeting-related tickets, the workflow includes agent coordination:
    ↓
 4. Meeting Assistant → Reads transcript → Extracts information
    ↓
-   ├─→ Stakeholders found → HR Agent → .claude/stakeholders/
+   ├─→ Stakeholders found → Stakeholder Manager Agent → .claude/stakeholders/
    ├─→ Knowledge found → (Future: Knowledge Manager) → Knowledge base
    └─→ Meeting prep needed → Creates agenda → Specified location
    ↓

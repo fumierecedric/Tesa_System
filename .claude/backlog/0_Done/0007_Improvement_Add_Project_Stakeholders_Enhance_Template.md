@@ -1,5 +1,7 @@
 # Ticket 0007: Add Project Stakeholders and Enhance Template
 
+> **Historical Note**: This ticket references the "HR Agent" which was later renamed to "Stakeholder Manager Agent" (see ticket 0015).
+
 **Epic:** Stakeholder Management
 **Type:** Improvement
 **Priority:** Medium

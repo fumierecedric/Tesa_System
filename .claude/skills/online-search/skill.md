@@ -299,8 +299,8 @@ Meeting Assistant may trigger online-search to:
 - Find documentation for decisions being discussed
 - Gather external context for meeting preparation
 
-### HR Agent Integration
-HR Agent may trigger online-search to:
+### Stakeholder Manager Agent Integration
+Stakeholder Manager Agent may trigger online-search to:
 - Research companies or stakeholders
 - Find contact information or organizational details
 - Gather industry context

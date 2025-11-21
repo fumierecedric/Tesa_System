@@ -1,6 +1,6 @@
 ---
 name: meeting-management
-description: Manages meeting lifecycle workflows including meeting preparation (agenda creation), information extraction and task allocation to other agents (HR, Knowledge Manager), and transcript summarization with standardized templates
+description: Manages meeting lifecycle workflows including meeting preparation (agenda creation), information extraction and task allocation to other agents (Stakeholder Manager, Knowledge Manager), and transcript summarization with standardized templates
 allowed-tools: [Read, Write, Edit, Glob, Grep]
 ---
 
@@ -14,7 +14,7 @@ Meeting-related files are organized as follows:
 - `.claude/meetings/transcripts/` - Meeting transcript files (input)
 - `.claude/meetings/summaries/` - Meeting summary files (output)
 - `.claude/skills/meeting-management/templates/` - Templates for meeting summaries
-- `.claude/stakeholders/` - Stakeholder files managed by HR agent
+- `.claude/stakeholders/` - Stakeholder files managed by Stakeholder Manager agent
 - `.claude/knowledge/` - Knowledge entries managed by Knowledge Manager agent (future)
 
 ## File Naming Conventions
@@ -126,11 +126,11 @@ Extract important information from meeting transcripts and allocate tasks to spe
    - Note relevant stakeholder context from discussion
    - Collect discussion points involving specific stakeholders
 
-4. **Trigger HR agent for stakeholder processing**
-   - Invoke HR agent with extracted stakeholder information
+4. **Trigger Stakeholder Manager agent for stakeholder processing**
+   - Invoke Stakeholder Manager agent with extracted stakeholder information
    - **Include transcript link**: Provide path to transcript for context
    - Format: `[transcript](.claude/meetings/transcripts/YYYYMMDD-HHMMSS MeetingName-transcript.md)`
-   - HR agent will create or update stakeholder files in `.claude/stakeholders/`
+   - Stakeholder Manager agent will create or update stakeholder files in `.claude/stakeholders/`
 
 5. **Extract knowledge entries**
    - Identify important decisions made during the meeting
@@ -166,16 +166,16 @@ Extract important information from meeting transcripts and allocate tasks to spe
 - Context about which agents to trigger
 
 **Outputs**:
-- Stakeholder information sent to HR agent (with transcript link)
+- Stakeholder information sent to Stakeholder Manager agent (with transcript link)
 - Knowledge entries sent to Knowledge Manager agent (with transcript link) - FUTURE
 - Meeting preparation requests sent to Meeting Assistant (with transcript link)
 - Summary of extraction and task allocation
 
 **Integration Patterns**:
 
-**HR Agent Integration**:
+**Stakeholder Manager Agent Integration**:
 ```markdown
-Trigger: "HR Agent - Process stakeholder information from meeting"
+Trigger: "Stakeholder Manager Agent - Process stakeholder information from meeting"
 Context:
 - Stakeholder: John Smith, CTO at TechCorp
 - Interaction: Discussed API integration requirements
@@ -206,7 +206,7 @@ User ticket instructions: "Extract stakeholder info and create summary for TechC
 Agent:
 1. Read .claude/meetings/transcripts/20251121-143000 TechCorp Planning-transcript.md
 2. Extract: John Smith (CTO, TechCorp), discussed API requirements
-3. Trigger HR agent: Create/update stakeholder file for John Smith with transcript link
+3. Trigger Stakeholder Manager agent: Create/update stakeholder file for John Smith with transcript link
 4. Extract: Decision to use REST API, rationale: simplicity and compatibility
 5. Note for Knowledge Manager: (agent doesn't exist yet, document for future)
 6. Extract: Follow-up meeting needed on 20251128 to review API specs
@@ -266,7 +266,7 @@ Create concise, synthetic summaries of meeting transcripts using a standardized 
    - Make action items specific and measurable
 
    **Suggestions for Information Extraction**
-   - **Stakeholder Information (HR Agent)**: List stakeholders relevant to this topic
+   - **Stakeholder Information (Stakeholder Manager Agent)**: List stakeholders relevant to this topic
    - **Knowledge Entries (Knowledge Manager Agent)**: List decisions, processes, or knowledge to document
    - **Other Agents**: Include any other agent types that should extract information from this topic
 
@@ -358,7 +358,7 @@ Agent:
 - **Follow file naming conventions** strictly for easy discovery and organization
 
 ### Agent Integration
-- **HR Agent**: Available now for stakeholder information extraction
+- **Stakeholder Manager Agent**: Available now for stakeholder information extraction
 - **Knowledge Manager Agent**: Placeholder for future - document patterns but note agent doesn't exist
 - **Meeting Assistant**: Self-reference for meeting preparation workflow
 
@@ -390,6 +390,6 @@ Typical meeting lifecycle:
 ## References
 
 - Meeting Assistant Agent: `.claude/agents/meeting-assistant.md`
-- HR Agent: `.claude/agents/hr.md`
+- Stakeholder Manager Agent: `.claude/agents/hr.md`
 - Stakeholder Management Skill: `.claude/skills/stakeholder-management/skill.md`
 - Knowledge Manager Agent: (Future - not yet implemented)

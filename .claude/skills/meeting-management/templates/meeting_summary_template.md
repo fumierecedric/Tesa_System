@@ -34,7 +34,7 @@ Created: {{CREATED_DATE}}
 
 <!-- Identify what information should be extracted and which agent should handle it -->
 
-- **Stakeholder Information (HR Agent)**
+- **Stakeholder Information (Stakeholder Manager Agent)**
   - {{TOPIC_1_STAKEHOLDER_INFO}}
 - **Knowledge Entries (Knowledge Manager Agent)**
   - {{TOPIC_1_KNOWLEDGE_INFO}}
@@ -68,7 +68,7 @@ Created: {{CREATED_DATE}}
 
 <!-- Identify what information should be extracted and which agent should handle it -->
 
-- **Stakeholder Information (HR Agent)**
+- **Stakeholder Information (Stakeholder Manager Agent)**
   - {{TOPIC_2_STAKEHOLDER_INFO}}
 - **Knowledge Entries (Knowledge Manager Agent)**
   - {{TOPIC_2_KNOWLEDGE_INFO}}
@@ -102,7 +102,7 @@ Created: {{CREATED_DATE}}
 
 <!-- Identify what information should be extracted and which agent should handle it -->
 
-- **Stakeholder Information (HR Agent)**
+- **Stakeholder Information (Stakeholder Manager Agent)**
   - {{TOPIC_3_STAKEHOLDER_INFO}}
 - **Knowledge Entries (Knowledge Manager Agent)**
   - {{TOPIC_3_KNOWLEDGE_INFO}}
@@ -121,7 +121,7 @@ Created: {{CREATED_DATE}}
    - **Summary**: Short, crisp bullet points (2-4 points maximum)
    - **Details**: Key participant contributions with attribution (format: "**Name**: detail")
    - **Action Points**: Clear, actionable items with owner assignments (use checkboxes)
-   - **Suggestions for Information Extraction**: Identify what should be extracted by which agent (HR Agent, Knowledge Manager Agent, Meeting Assistant Agent, or any other relevant agent)
+   - **Suggestions for Information Extraction**: Identify what should be extracted by which agent (Stakeholder Manager Agent, Knowledge Manager Agent, Meeting Assistant Agent, or any other relevant agent)
 6. **Action Point format**: "- [ ] Action description (Owner: Name)" - include owner when known
 7. **Information Extraction**: Be specific about what information is relevant for each agent type
 8. **Add/remove topics**: Use as many topic sections as needed (not limited to 3)

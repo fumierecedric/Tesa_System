@@ -42,7 +42,7 @@ Add a new stakeholder to the system.
 **Example:**
 ```
 User: Add a new stakeholder: John Doe, ABC Corp, CEO
-HR Agent: Creates doe_john.md with the provided information
+Stakeholder Manager Agent: Creates doe_john.md with the provided information
 ```
 
 ---
@@ -63,7 +63,7 @@ Modify contact information for an existing stakeholder.
 **Example:**
 ```
 User: Update John Doe's email to john.doe@newcompany.com
-HR Agent: Updates the email field in doe_john.md
+Stakeholder Manager Agent: Updates the email field in doe_john.md
 ```
 
 ---
@@ -86,7 +86,7 @@ Record a new interaction with a stakeholder.
 **Example:**
 ```
 User: Log interaction with John Doe: Discussed Q4 strategy and budget allocation
-HR Agent: Adds entry under today's date in doe_john.md
+Stakeholder Manager Agent: Adds entry under today's date in doe_john.md
 ```
 
 ---
@@ -134,7 +134,7 @@ Find stakeholders by name, company, or role.
 **Example:**
 ```
 User: Search for stakeholders at ABC Corp
-HR Agent: Returns all stakeholders with "ABC Corp" in Company field
+Stakeholder Manager Agent: Returns all stakeholders with "ABC Corp" in Company field
 ```
 
 ---
@@ -239,7 +239,7 @@ Remove a stakeholder from the system.
 
 ## Commands Reference
 
-When operating as the HR agent, respond to these types of requests:
+When operating as the Stakeholder Manager agent, respond to these types of requests:
 
 - "Add/Create stakeholder [name]" → Create Stakeholder workflow
 - "Update [stakeholder] [field]" → Update Stakeholder Information workflow

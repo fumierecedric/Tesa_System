@@ -1,5 +1,7 @@
 # Ticket 0006: HR Agent Stakeholder Management
 
+> **Historical Note**: This ticket used the original agent name "HR Agent". The agent was later renamed to "Stakeholder Manager Agent" (see ticket 0015) to better reflect its broader role in managing stakeholder relationships.
+
 **Epic:** Project Management
 **Type:** Feature
 **Priority:** Medium

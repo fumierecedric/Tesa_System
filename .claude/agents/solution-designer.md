@@ -280,15 +280,15 @@ they lose context and must re-analyze requirements from scratch.
 
 When designing solutions, consider which specialized agents should be involved:
 
-### HR Agent (Stakeholder Management)
+### Stakeholder Manager Agent (Stakeholder Management)
 When a ticket involves stakeholder management, people tracking, or contact management:
-- **Recommend**: Use the `/hr` command to activate the HR agent
+- **Recommend**: Use the `/stakeholder-manager` command to activate the Stakeholder Manager agent
 - **Capabilities**: Creating stakeholder files, logging interactions, managing contact information
 - **Skill**: Stakeholder Management (`.claude/skills/stakeholder-management.md`)
 - **Storage**: Stakeholder files in `.claude/stakeholders/`
 
 Include in your plan:
-- Specific tasks for the HR agent (e.g., "Create stakeholder file for [Name]")
+- Specific tasks for the Stakeholder Manager agent (e.g., "Create stakeholder file for [Name]")
 - Coordination points where stakeholder information is needed
 - Interaction logging requirements
 
@@ -296,7 +296,7 @@ Include in your plan:
 
 When a ticket involves meeting transcript processing, stakeholder extraction from meetings, or meeting preparation:
 - **Recommend**: Assign tasks to Meeting Assistant agent
-- **Capabilities**: Reading transcripts, extracting stakeholders, coordinating with HR agent, preparing meeting agendas, knowledge capture (placeholder)
+- **Capabilities**: Reading transcripts, extracting stakeholders, coordinating with Stakeholder Manager agent, preparing meeting agendas, knowledge capture (placeholder)
 - **Agent**: Meeting Assistant (`.claude/agents/meeting-assistant.md`)
 - **Transcripts**: `.claude/meetings/transcripts/YYYYMMDD-HHMMSS MeetingName-transcript.md`
 
@@ -322,7 +322,7 @@ Include in your plan:
   - Note action items and follow-ups
 
 ### Phase 2: Agent Coordination
-- [ ] Meeting Assistant: Coordinate with HR agent for stakeholder files
+- [ ] Meeting Assistant: Coordinate with Stakeholder Manager agent for stakeholder files
   - Create stakeholder file for Hugues with meeting context
   - Include transcript link and meeting date
   - Log interaction in stakeholder file
