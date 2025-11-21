@@ -60,3 +60,50 @@ git remote add origin git@github.com:fumierecedric/Tesa_System.git
 ```sh
 git push -u origin main
 ```
+
+## Environment Setup
+
+### Create yml file for Conda environment
+
+```sh
+cat >> environment.yml << 'EOF'
+name: tesa
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python=3.14
+- ipython
+- pandas
+- pip
+- pip:
+  - python-pptx
+  - openpyxl
+EOF
+```
+
+### Create Conda environment using environment.yml config file
+
+```sh
+conda env create -f environment.yml
+```
+
+### Update environement (e.g. if environment.yml needs to be amended)
+
+```sh
+conda env update -f environment.yml
+```
+
+### Activate environment
+
+```sh
+conda activate tesa
+```
+
+## Claude
+
+### Create .claude
+
+```sh
+mkdir -p .claude
+```
