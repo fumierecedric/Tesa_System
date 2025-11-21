@@ -37,7 +37,7 @@ The Solution Designer should:
   - [ ] Task dependencies and sequencing
   - [ ] Checkboxes for each task to track completion
 - [ ] Plans are stored in `.claude/plans/` directory
-- [ ] Plan filename matches ticket ID format: `{TICKET_ID}_Plan.md` (e.g., `0003_Plan.md`)
+- [ ] Plan filename matches ticket filename with `_Plan` suffix: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}_Plan.md` (e.g., `0003_Feature_Solution_Designer_Agent_Plan.md`)
 - [ ] Plan template with standardized structure created
 - [ ] Agent can update existing plans when requirements change
 - [ ] Plans are formatted for easy reading and tracking by both humans and AI agents
@@ -116,9 +116,9 @@ Status: In Progress
 │   ├── 4_Wait/
 │   └── 5_Archive/
 ├── plans/
-│   ├── 0001_Plan.md
-│   ├── 0002_Plan.md
-│   └── 0003_Plan.md
+│   ├── 0001_Feature_X_Plan.md
+│   ├── 0002_Feature_Y_Plan.md
+│   └── 0003_Feature_Solution_Designer_Agent_Plan.md
 └── skills/
     └── solution-design/
 ```
