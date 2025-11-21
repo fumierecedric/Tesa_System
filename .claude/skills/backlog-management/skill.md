@@ -52,7 +52,7 @@ Convert a raw note or request into a structured ticket.
    - `{{EPIC}}`: Epic name
    - `{{TITLE}}`: Ticket title
    - `{{TYPE}}`: Feature/Bug/Improvement
-   - `{{STATUS}}`: Initial status (usually "3_To_Plan")
+   - `{{STATUS}}`: Initial status (usually "1_WIP")
    - `{{CREATED_DATE}}`: Current date in ISO format (YYYY-MM-DD)
    - `{{UPDATED_DATE}}`: Current date in ISO format (YYYY-MM-DD)
    - `{{PRIORITY}}`: Low/Medium/High/Critical
