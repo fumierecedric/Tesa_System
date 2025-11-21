@@ -3,9 +3,10 @@ Epic: Product Management
 Id: 0012
 Title: Meeting Summary Template Topic-Based Structure
 Type: Improvement
-Status: 1_WIP
+Status: 0_Done
 Created: 2025-11-21
 Updated: 2025-11-21
+Completed: 2025-11-21
 Priority: High
 Sprint: none
 ---
@@ -22,17 +23,17 @@ So that I can quickly understand the key points, decisions, and action items for
 
 ## Acceptance Criteria
 
-- [ ] The meeting summary template is updated with the new topic-based structure
-- [ ] Each main topic section includes:
+- [x] The meeting summary template is updated with the new topic-based structure
+- [x] Each main topic section includes:
   - Summary subsection with short, crisp bullet points
   - Details subsection with participant contributions
   - Action Points subsection with checkboxes and owner assignments
   - Suggestions for Information Extraction subsection for various agents (HR Agent, Knowledge Manager Agent, etc.)
-- [ ] Topics are organized in chronological order (topic 1 is the first discussed, etc.)
-- [ ] The new template completely replaces the existing one (no backward compatibility required)
-- [ ] Template emphasizes synthetic and structured content (short better than long)
-- [ ] Documentation is updated to reflect the new template structure
-- [ ] The `/summarize-meeting` command is tested with the new template and works correctly
+- [x] Topics are organized in chronological order (topic 1 is the first discussed, etc.)
+- [x] The new template completely replaces the existing one (no backward compatibility required)
+- [x] Template emphasizes synthetic and structured content (short better than long)
+- [x] Documentation is updated to reflect the new template structure
+- [x] The `/summarize-meeting` command is tested with the new template and works correctly
 
 ## Initial Request
 
