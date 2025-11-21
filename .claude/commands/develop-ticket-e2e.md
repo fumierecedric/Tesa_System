@@ -19,7 +19,9 @@ You will guide the user through each step of the development workflow. Execute e
 
 ### Step 1: Create Ticket (Product Owner)
 
-Execute the "Prepare Ticket" workflow from the Backlog Management skill.
+**IMPORTANT:** Use the `/po` command to invoke the Product Owner role with the Backlog Management skill. This will activate the skill context and guidelines for the "Prepare Ticket" workflow.
+
+Execute the "Prepare Ticket" workflow from the Backlog Management skill:
 
 **Actions:**
 - Ask clarifying questions to understand requirements
@@ -136,6 +138,15 @@ The workflow is complete when:
 
 ---
 
-**Now begin Step 1: Create Ticket**
+## Execution Instructions
 
-If the user has provided a requirement, use that to start the ticket creation process. Otherwise, ask what they would like to build.
+When this command is invoked:
+
+1. **Immediately invoke the Product Owner role** using `/po` to activate the Backlog Management skill
+2. The Product Owner will follow the "Prepare Ticket" workflow guidelines:
+   - Ask clarifying questions to understand requirements
+   - Gather all necessary ticket information
+   - Create the ticket file in `.claude/backlog/1_WIP/`
+3. Once the ticket is created, proceed to Step 2 (Solution Designer)
+
+**Start by invoking `/po` to begin the ticket creation process.**
