@@ -292,6 +292,42 @@ Include in your plan:
 - Coordination points where stakeholder information is needed
 - Interaction logging requirements
 
+### Meeting Assistant (Meeting Processing & Coordination)
+
+When a ticket involves meeting transcript processing, stakeholder extraction from meetings, or meeting preparation:
+- **Recommend**: Assign tasks to Meeting Assistant agent
+- **Capabilities**: Reading transcripts, extracting stakeholders, coordinating with HR agent, preparing meeting agendas, knowledge capture (placeholder)
+- **Agent**: Meeting Assistant (`.claude/agents/meeting-assistant.md`)
+- **Transcripts**: `.claude/meetings/transcripts/YYYYMMDD-HHMMSS MeetingName-transcript.md`
+
+**When to recognize meeting tickets**:
+- Ticket title or description contains: "meeting", "transcript", "agenda", "meeting prep"
+- Ticket references transcript files from `.claude/meetings/transcripts/`
+- Ticket asks for stakeholder extraction from meeting discussions
+- Ticket requests meeting preparation or follow-up
+
+Include in your plan:
+- Specific tasks for Meeting Assistant (e.g., "Extract stakeholder info from transcript X")
+- Reference to transcript file with full filename
+- Clear instructions on what to extract (stakeholders, knowledge, action items)
+- Coordination points with other agents (HR for stakeholders, etc.)
+- Expected outputs (stakeholder files, agendas, knowledge items)
+
+**Example task breakdown**:
+```markdown
+### Phase 1: Transcript Processing
+- [ ] Meeting Assistant: Read transcript `20251120-120000 Call Hugues on Tesa-transcript.md`
+  - Extract stakeholder information
+  - Identify key discussion topics
+  - Note action items and follow-ups
+
+### Phase 2: Agent Coordination
+- [ ] Meeting Assistant: Coordinate with HR agent for stakeholder files
+  - Create stakeholder file for Hugues with meeting context
+  - Include transcript link and meeting date
+  - Log interaction in stakeholder file
+```
+
 ### Other Specialized Agents
 As more specialized agents are added to the project, document their capabilities and when to involve them here.
 
