@@ -1,0 +1,31 @@
+- Create a Product Owner Agent (short name: PO)
+- Store the agent configuration in `.claude/agents/`
+- The PO will be responsible for managing the product backlog in `/.claude/backlog/`, that is the "tickets"
+- The setup for the PO should be very light in itself, we will leverage Skills to implement the actual standard workflows of the PO
+- You should create those Skills as needed, and store them in `.claude/skills/`
+- A core skill "Backlog Management" should be created to start with
+- The "Backlog Management" skill should implement at least the following workflows:
+    - Initialize Backlog: in `.claude/backlog/`, create a folder structure: 0_Done, 1_WIP, 2_To_Do, 3_To_Plan, 4_Wait, 5_Archive if it does not exist yet
+    - Prepare Ticket: for any given file in the backlog (raw note), per default look into 2_To_Do/ folder, prepare a ticket markdown file with all relevant fields (see below)
+        - Assign a Ticket ID (incremental integer) based on all tickets in the backlog (4 digits, zero-padded, e.g. 0001, 0002, etc)
+        - Create a markdown file in `/.claude/backlog/3_To_Plan/` using a template to be defined in the skill (in a dedicated sub-folder `templates/` inside the skill folder)
+            - The template should include at least the following fields
+                - Epic: Ask user for confirmation
+                - Id: the numbering of the ticket (4 digits, zero-padded, e.g. 0001, 0002, etc)
+                - Title: name of the ticket
+                - Summary: a short description of the ticket
+                - Type: (Feature, Bug, Improvement), ask user for confirmation
+                - Status 0_Done, 1_WIP, 2_To_Do, 3_To_Plan, 4_Wait, 5_Archive
+                - Created Date
+                - Update Date
+                - User Story: detailed description of the ticket
+                - Acceptance Criteria: list of criteria to be met for the ticket to be considered done
+                - Inital Request: a copy of the initial request that led to the creation of the ticket
+                - Prioritization: (Low, Medium, High, Critical), ask user for confirmation - per default Medium
+                - Sprint: assign to a sprint if applicable, otherwise leave blank
+    - Update Ticket: update fields of an existing ticket as needed
+    - Close Ticket: update status and move ticket file to 0_Done/ folder
+- The PO agent should be able to leverage the "Backlog Management" skill to perform backlog operations as needed
+- The PO agent should interact with the user to gather necessary information for ticket creation and updates
+- Ensure proper documentation of the PO agent and the "Backlog Management" skill for future reference
+- It's important for the product owner to ask clarifying questions to fully understand the requirements before creating or updating tickets
