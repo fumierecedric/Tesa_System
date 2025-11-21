@@ -19,9 +19,7 @@ You will guide the user through each step of the development workflow. Execute e
 
 ### Step 1: Create Ticket (Product Owner)
 
-**IMPORTANT:** Use the `/po` command to invoke the Product Owner role with the Backlog Management skill. This will activate the skill context and guidelines for the "Prepare Ticket" workflow.
-
-Execute the "Prepare Ticket" workflow from the Backlog Management skill:
+Adopt the Product Owner role and execute the "Prepare Ticket" workflow from the Backlog Management skill.
 
 **Actions:**
 - Ask clarifying questions to understand requirements
@@ -142,11 +140,25 @@ The workflow is complete when:
 
 When this command is invoked:
 
-1. **Immediately invoke the Product Owner role** using `/po` to activate the Backlog Management skill
-2. The Product Owner will follow the "Prepare Ticket" workflow guidelines:
-   - Ask clarifying questions to understand requirements
-   - Gather all necessary ticket information
-   - Create the ticket file in `.claude/backlog/1_WIP/`
-3. Once the ticket is created, proceed to Step 2 (Solution Designer)
+1. **Adopt the Product Owner role** and check the backlog state:
+   - Check `.claude/backlog/1_WIP/` for existing prepared tickets (with ticket ID)
+   - Check `.claude/backlog/2_To_Do/` or `.claude/backlog/3_To_Plan/` for unprepared tickets/notes
+   - Ask the user which ticket to work on, or if they want to create a new one
 
-**Start by invoking `/po` to begin the ticket creation process.**
+2. **If ticket needs preparation** (in 2_To_Do, 3_To_Plan, or new):
+   - Execute the "Prepare Ticket" workflow from Backlog Management skill
+   - Ask clarifying questions to understand requirements
+   - Gather all necessary ticket information (Epic, Title, Type, Priority, Sprint, User Story, Acceptance Criteria)
+   - Create ticket in `.claude/backlog/1_WIP/` with assigned ticket ID
+   - Delete original note file if applicable
+
+3. **If ticket is already prepared** (exists in 1_WIP with ID):
+   - Skip Step 1 and proceed directly to Step 2 (Solution Designer)
+
+4. **Continue with remaining steps**:
+   - Step 2: Create Execution Plan (Solution Designer)
+   - Step 3: Execute Implementation
+   - Step 4: Create Development Log (Solution Designer)
+   - Step 5: Close Ticket (Product Owner)
+
+**Start by checking the backlog state and determining the appropriate entry point.**
