@@ -12,9 +12,10 @@ Execution plans break down complex features and requirements into manageable, ac
 
 ## Naming Convention
 
-Plans are named according to their corresponding ticket ID:
-- Format: `{TICKET_ID}_Plan.md`
-- Example: `0003_Plan.md` corresponds to ticket `0003_Feature_Solution_Designer_Agent.md`
+Plans are named to match their corresponding ticket filename:
+- Format: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}_Plan.md`
+- Example: `0003_Feature_Solution_Designer_Agent_Plan.md` corresponds to ticket `0003_Feature_Solution_Designer_Agent.md`
+- The plan filename should exactly match the ticket filename with `_Plan` appended before the `.md` extension
 
 ## Plan Structure
 
