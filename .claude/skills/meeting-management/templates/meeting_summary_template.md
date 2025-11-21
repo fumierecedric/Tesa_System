@@ -1,70 +1,130 @@
 ---
 Meeting: {{MEETING_NAME}}
 Date: {{MEETING_DATE}}
-Transcript: {{TRANSCRIPT_PATH}}
+Transcript: [{{MEETING_NAME}}-transcript.md](.claude/meetings/transcripts/{{TRANSCRIPT_FILENAME}})
 Created: {{CREATED_DATE}}
 ---
 
-# Meeting Summary: {{MEETING_NAME}}
+# {{MEETING_NAME}}
 
-## Main Topics Discussed
+## {{TOPIC_1_TITLE}}
 
-<!-- List 3-5 main topics with a few words each. Be concise. -->
+### Takeaways
 
-1. {{TOPIC_1}}
-2. {{TOPIC_2}}
-3. {{TOPIC_3}}
+<!-- Short, crisp bullet points capturing the essence of this topic -->
 
-## Key Takeaways
+- {{TOPIC_1_SUMMARY_POINT_1}}
+- {{TOPIC_1_SUMMARY_POINT_2}}
 
-<!-- Synthetic bullet points capturing the essence of decisions and important information. Be concise and actionable. -->
+### Details
 
-- {{TAKEAWAY_1}}
-- {{TAKEAWAY_2}}
-- {{TAKEAWAY_3}}
+<!-- Key contributions and details from participants, maintaining chronological order within this topic -->
 
-## Discussion Points
+- **{{PARTICIPANT_1}}**: {{TOPIC_1_DETAIL_1}}
+- **{{PARTICIPANT_2}}**: {{TOPIC_1_DETAIL_2}}
 
-<!-- Document who said what crucial information. Focus only on key contributors and important statements. Format: "**Name**: Statement or contribution" -->
+### Action Points
 
-- **{{PARTICIPANT_1}}**: {{CRUCIAL_INFO_1}}
-- **{{PARTICIPANT_2}}**: {{CRUCIAL_INFO_2}}
-- **{{PARTICIPANT_3}}**: {{CRUCIAL_INFO_3}}
+<!-- Clear, actionable items with owner assignments -->
 
-## Action Points
+- [ ] {{TOPIC_1_ACTION_1}} (Owner: {{OWNER_1}})
+- [ ] {{TOPIC_1_ACTION_2}} (Owner: {{OWNER_2}})
 
-<!-- Clear, actionable items with owner if identified. Format: "- Action description (Owner: Name)" or "- Action description" -->
+### Suggestions for Information Extraction
 
-- [ ] {{ACTION_1}}
-- [ ] {{ACTION_2}}
-- [ ] {{ACTION_3}}
+<!-- Identify what information should be extracted and which agent should handle it -->
 
-## Suggestions for Information Extraction
+- **Stakeholder Information (HR Agent)**
+  - {{TOPIC_1_STAKEHOLDER_INFO}}
+- **Knowledge Entries (Knowledge Manager Agent)**
+  - {{TOPIC_1_KNOWLEDGE_INFO}}
+- **Other Agent Information**
+  - {{TOPIC_1_OTHER_INFO}}
 
-<!-- Identify what information should be extracted from this meeting and which agent should handle it. This helps with systematic follow-up. -->
+## {{TOPIC_2_TITLE}}
 
-### Stakeholder Information (HR Agent)
-<!-- List any new stakeholders mentioned or updates to existing stakeholder information -->
-- {{STAKEHOLDER_EXTRACTION_1}}
+### Takeaways
 
-### Knowledge Entries (Knowledge Manager Agent)
-<!-- List important knowledge, decisions, or processes that should be documented -->
-- {{KNOWLEDGE_EXTRACTION_1}}
+<!-- Short, crisp bullet points capturing the essence of this topic -->
 
-### Meeting Preparation (Meeting Assistant Agent)
-<!-- List any follow-up meetings that need preparation -->
-- {{MEETING_PREP_1}}
+- {{TOPIC_2_SUMMARY_POINT_1}}
+- {{TOPIC_2_SUMMARY_POINT_2}}
+
+### Details
+
+<!-- Key contributions and details from participants, maintaining chronological order within this topic -->
+
+- **{{PARTICIPANT_1}}**: {{TOPIC_2_DETAIL_1}}
+- **{{PARTICIPANT_2}}**: {{TOPIC_2_DETAIL_2}}
+
+### Action Points
+
+<!-- Clear, actionable items with owner assignments -->
+
+- [ ] {{TOPIC_2_ACTION_1}} (Owner: {{OWNER_1}})
+- [ ] {{TOPIC_2_ACTION_2}} (Owner: {{OWNER_2}})
+
+### Suggestions for Information Extraction
+
+<!-- Identify what information should be extracted and which agent should handle it -->
+
+- **Stakeholder Information (HR Agent)**
+  - {{TOPIC_2_STAKEHOLDER_INFO}}
+- **Knowledge Entries (Knowledge Manager Agent)**
+  - {{TOPIC_2_KNOWLEDGE_INFO}}
+- **Other Agent Information**
+  - {{TOPIC_2_OTHER_INFO}}
+
+## {{TOPIC_3_TITLE}}
+
+### Takeaways
+
+<!-- Short, crisp bullet points capturing the essence of this topic -->
+
+- {{TOPIC_3_SUMMARY_POINT_1}}
+- {{TOPIC_3_SUMMARY_POINT_2}}
+
+### Details
+
+<!-- Key contributions and details from participants, maintaining chronological order within this topic -->
+
+- **{{PARTICIPANT_1}}**: {{TOPIC_3_DETAIL_1}}
+- **{{PARTICIPANT_2}}**: {{TOPIC_3_DETAIL_2}}
+
+### Action Points
+
+<!-- Clear, actionable items with owner assignments -->
+
+- [ ] {{TOPIC_3_ACTION_1}} (Owner: {{OWNER_1}})
+- [ ] {{TOPIC_3_ACTION_2}} (Owner: {{OWNER_2}})
+
+### Suggestions for Information Extraction
+
+<!-- Identify what information should be extracted and which agent should handle it -->
+
+- **Stakeholder Information (HR Agent)**
+  - {{TOPIC_3_STAKEHOLDER_INFO}}
+- **Knowledge Entries (Knowledge Manager Agent)**
+  - {{TOPIC_3_KNOWLEDGE_INFO}}
+- **Other Agent Information**
+  - {{TOPIC_3_OTHER_INFO}}
 
 ---
 
 ## Instructions for Use
 
-1. **Be concise and synthetic**: Summaries should capture essence, not transcribe everything
-2. **Focus on crucial information**: Not every statement needs to be documented
-3. **Main Topics**: 3-5 topics maximum, each described in a few words
-4. **Key Takeaways**: Synthetic bullet points highlighting decisions and important information
-5. **Discussion Points**: Only document crucial contributions that add context or drive decisions
-6. **Action Points**: Clear, actionable items - use checkboxes for tracking
-7. **Suggestions**: Identify extraction opportunities for systematic follow-up by specialized agents
-8. **File naming**: Save as `YYYYMMDD-HHMMSS MeetingName-summary.md` (replace `-transcript` with `-summary`)
-9. **Location**: Save to `.claude/meetings/summaries/`
+1. **Be synthetic and structured**: Keep summaries short and organized by main topics
+2. **Chronological topic order**: Topics should be ordered as they were discussed (Topic 1 = first discussed, etc.)
+3. **Short better than long**: Focus on essence, not exhaustive details
+4. **Main Topics**: Organize content by 3-5 main topics discussed in the meeting
+5. **For each topic include**:
+   - **Summary**: Short, crisp bullet points (2-4 points maximum)
+   - **Details**: Key participant contributions with attribution (format: "**Name**: detail")
+   - **Action Points**: Clear, actionable items with owner assignments (use checkboxes)
+   - **Suggestions for Information Extraction**: Identify what should be extracted by which agent (HR Agent, Knowledge Manager Agent, Meeting Assistant Agent, or any other relevant agent)
+6. **Action Point format**: "- [ ] Action description (Owner: Name)" - include owner when known
+7. **Information Extraction**: Be specific about what information is relevant for each agent type
+8. **Add/remove topics**: Use as many topic sections as needed (not limited to 3)
+9. **File naming**: Save as `YYYYMMDD-HHMMSS MeetingName-summary.md` (replace `-transcript` with `-summary`)
+10. **Location**: Save to `.claude/meetings/summaries/`
+11. **Links**: Use repository-root-relative paths (e.g., `.claude/meetings/transcripts/...`) for clickability

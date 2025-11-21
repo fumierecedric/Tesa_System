@@ -238,58 +238,65 @@ Create concise, synthetic summaries of meeting transcripts using a standardized 
    - Read template from `.claude/skills/meeting-management/templates/meeting_summary_template.md`
    - Understand required sections and formatting
 
-3. **Extract main topics discussed**
+3. **Identify main topics discussed**
    - Identify 3-5 main topics from the transcript
-   - Describe each topic in a few words (be concise!)
+   - **Order topics chronologically** (Topic 1 = first discussed, Topic 2 = second, etc.)
+   - Give each topic a descriptive title (be concise!)
    - Focus on themes, not individual statements
-   - Prioritize by importance or time spent
 
-4. **Extract key takeaways**
-   - Create synthetic bullet points (not verbatim transcription)
-   - Highlight decisions made
-   - Note important information shared
-   - Capture conclusions and agreements
-   - **Be concise**: Each takeaway should be one clear sentence
+4. **For each main topic, extract the following**:
 
-5. **Extract discussion points**
+   **Summary (short, crisp bullet points)**
+   - Create 2-4 synthetic bullet points capturing the essence
+   - Highlight key decisions and conclusions
+   - **Be concise**: Quality over quantity
+   - Not verbatim transcription - synthesize!
+
+   **Details (participant contributions)**
    - Identify crucial contributions from participants
    - Format: "**Name**: Statement or contribution"
    - **Only include crucial information**: Not every statement needs documentation
+   - Maintain chronological order within the topic
    - Focus on insights, decisions, concerns, or important context
-   - Attribute information to speakers for context
 
-6. **Extract action points**
-   - Identify clear, actionable items
-   - Format with checkboxes: `- [ ] Action description`
-   - Include owner if identified: `- [ ] Action description (Owner: Name)`
+   **Action Points (clear, actionable items)**
+   - Identify action items related to this specific topic
+   - Format with checkboxes: `- [ ] Action description (Owner: Name)`
+   - Include owner when identified
    - Make action items specific and measurable
-   - Prioritize by importance or urgency
 
-7. **Create suggestions for information extraction**
-   - **Stakeholder Information (HR Agent)**: List stakeholders mentioned or updates needed
+   **Suggestions for Information Extraction**
+   - **Stakeholder Information (HR Agent)**: List stakeholders relevant to this topic
    - **Knowledge Entries (Knowledge Manager Agent)**: List decisions, processes, or knowledge to document
-   - **Meeting Preparation (Meeting Assistant)**: List follow-up meetings that need agendas
+   - **Other Agents**: Include any other agent types that should extract information from this topic
 
-8. **Populate the template**
+5. **Organize content by topics**
+   - Each topic becomes its own section with all four subsections
+   - Topics flow in chronological order as discussed
+   - Keep summaries synthetic and structured
+   - Short better than long
+
+6. **Populate the template**
    - Fill in YAML frontmatter:
      - Meeting: Extract meeting name from filename
      - Date: Extract date/time from filename (YYYYMMDD-HHMMSS)
-     - Transcript: Path to source transcript
+     - Transcript: Use repository-root-relative path (e.g., `.claude/meetings/transcripts/YYYYMMDD-HHMMSS MeetingName-transcript.md`)
      - Created: Current date
    - Fill in all content sections with extracted information
    - **Keep it concise and synthetic**: Quality over quantity
+   - Add or remove topic sections as needed (not limited to 3)
 
-9. **Determine output filename**
+7. **Determine output filename**
    - Take original transcript filename
    - Replace `-transcript` with `-summary`
    - Example: `20251121-143000 TechCorp Planning-transcript.md` → `20251121-143000 TechCorp Planning-summary.md`
 
-10. **Save summary file**
+8. **Save summary file**
     - Save to `.claude/meetings/summaries/`
     - Use determined filename
     - Verify file created successfully
 
-11. **Confirm completion**
+9. **Confirm completion**
     - Report summary location to user
     - Highlight key findings if appropriate
     - Suggest next steps based on action items or extraction suggestions
@@ -316,17 +323,28 @@ User: "Summarize the TechCorp planning meeting transcript"
 Agent:
 1. Read .claude/meetings/transcripts/20251121-143000 TechCorp Planning-transcript.md
 2. Load templates/meeting_summary_template.md
-3. Extract main topics: "API Architecture", "Deployment Timeline", "Team Resources"
-4. Extract takeaways: "Decided on REST API approach for simplicity", "Deployment scheduled for Q1 2026"
-5. Extract discussion: "**John (CTO)**: Prefers REST over GraphQL for team familiarity"
-6. Extract actions: "- [ ] Jane to create API specification (Owner: Jane)", "- [ ] Team to review architecture doc by Friday"
-7. Create extraction suggestions:
-   - Stakeholder: John Smith (CTO, TechCorp)
-   - Knowledge: Decision to use REST API with rationale
-   - Meeting prep: Follow-up meeting on 20251128
-8. Populate template with all extracted information
-9. Save to .claude/meetings/summaries/20251121-143000 TechCorp Planning-summary.md
-10. Confirm: "Summary created at .claude/meetings/summaries/20251121-143000 TechCorp Planning-summary.md"
+3. Identify main topics (chronologically):
+   - Topic 1: "API Architecture Decision" (discussed first)
+   - Topic 2: "Deployment Timeline" (discussed second)
+   - Topic 3: "Team Resources" (discussed third)
+4. For Topic 1 (API Architecture):
+   - Summary: "Decided on REST API approach for simplicity and team familiarity"
+   - Details: "**John (CTO)**: Prefers REST over GraphQL for existing team expertise"
+   - Actions: "- [ ] Jane to create API specification (Owner: Jane)"
+   - Extraction: Stakeholder: John Smith (CTO); Knowledge: REST API decision with rationale
+5. For Topic 2 (Deployment Timeline):
+   - Summary: "Deployment scheduled for Q1 2026 with milestone reviews"
+   - Details: "**Sarah (PM)**: Suggested monthly checkpoints for risk mitigation"
+   - Actions: "- [ ] Team to finalize deployment schedule by Friday (Owner: Team)"
+   - Extraction: Knowledge: Q1 2026 deployment timeline
+6. For Topic 3 (Team Resources):
+   - Summary: "Need to hire 2 additional developers for API work"
+   - Details: "**John (CTO)**: Critical to have resources in place by December"
+   - Actions: "- [ ] HR to post job descriptions (Owner: HR)"
+   - Extraction: Knowledge: Resource requirement for project
+7. Populate template with all topics and their subsections
+8. Save to .claude/meetings/summaries/20251121-143000 TechCorp Planning-summary.md
+9. Confirm: "Summary created at .claude/meetings/summaries/20251121-143000 TechCorp Planning-summary.md"
 ```
 
 ---
