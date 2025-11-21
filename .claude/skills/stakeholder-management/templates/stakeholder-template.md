@@ -8,6 +8,8 @@
 **Role:** {{ROLE}}
 **Email:** {{EMAIL}}
 **Phone:** {{PHONE}}
+**LinkedIn:** {{LINKEDIN}}
+**Location:** {{LOCATION}}
 
 ---
 

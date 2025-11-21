@@ -29,6 +29,8 @@ Add a new stakeholder to the system.
    - Role (required)
    - Email (optional)
    - Phone (optional)
+   - LinkedIn (optional)
+   - Location (optional)
 2. Validate that required fields are provided
 3. Generate filename: `[familyname]_[firstname].md` (lowercase)
 4. Check if stakeholder file already exists
@@ -191,6 +193,7 @@ Remove a stakeholder from the system.
   - H2: Main sections (Contact Information, Interaction Log)
   - H3: Date entries within Interaction Log
 - **Chronological order:** Most recent interactions should be added at the top of the Interaction Log section (reverse chronological)
+- **Optional fields:** Email, Phone, LinkedIn, and Location are optional fields that can be omitted if not available
 
 ### Data Quality
 - Validate email formats (basic check for @ symbol and domain)
