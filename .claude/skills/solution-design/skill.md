@@ -4,16 +4,18 @@ You are assisting with solution design operations. This skill provides workflows
 
 ## Directory Structure
 
-Plans are stored in:
+Plans and logs are stored in:
 - `.claude/plans/` - Execution plans for tickets
-- `.claude/skills/solution-design/templates/` - Plan templates
+- `.claude/logs/` - Development logs documenting actual implementation
+- `.claude/skills/solution-design/templates/` - Plan and log templates
 
-## Plan Template
+## Templates
 
-The standard plan template is located at:
-`.claude/skills/solution-design/templates/plan-template.md`
+The standard templates are located at:
+- **Plan Template**: `.claude/skills/solution-design/templates/plan-template.md`
+- **Log Template**: `.claude/skills/solution-design/templates/log-template.md`
 
-This template includes all required sections with placeholders.
+These templates include all required sections with placeholders.
 
 ## Available Workflows
 
@@ -85,6 +87,50 @@ Modify an existing plan when requirements change.
    - Overwrite existing file
    - Maintain same filename
 
+### 3. Create Development Log
+
+Document actual implementation work after completing a feature.
+
+**Steps:**
+1. **After implementation is complete**
+   - All planned tasks have been executed
+   - Feature has been tested and validated
+   - Ready to document what actually happened
+
+2. **Gather implementation details**
+   - Review what tasks were completed
+   - Identify deviations from the original plan
+   - Document technical decisions made during implementation
+   - Note any issues encountered and their resolutions
+   - List all files created or modified
+
+3. **Load log template**
+   - Read template from `.claude/skills/solution-design/templates/log-template.md`
+   - Prepare to populate all sections
+
+4. **Populate log sections**
+   - **Ticket Reference**: Link to ticket and execution plan
+   - **Implementation Summary**: Brief overview of what was built
+   - **Implementation Timeline**: Start date, end date, duration
+   - **Tasks Completed**: List all phases and tasks with implementation notes
+   - **Deviations from Plan**: Document changes and reasons
+   - **Technical Decisions**: Key decisions with context and rationale
+   - **Issues & Resolutions**: Problems encountered and how they were solved
+   - **Files Created/Modified**: Complete list of file changes
+   - **Verification & Testing**: Testing performed and results
+   - **Lessons Learned**: Key takeaways from implementation
+   - **Next Steps**: Recommended follow-up actions
+
+5. **Generate log file**
+   - Determine filename: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}_Log.md`
+   - Example: `0004_Feature_Development_Log_Creation_Workflow_Log.md`
+   - Save to `.claude/logs/`
+
+6. **Validate log**
+   - Verify completeness of all sections
+   - Ensure readability and clarity
+   - Check proper formatting
+
 ## Plan Structure Requirements
 
 Every plan must include these sections:
@@ -123,8 +169,16 @@ Plans must match their ticket filename with `_Plan` suffix:
   - Dependencies if any
 ```
 
+## Log File Naming Convention
+
+Logs must match their ticket filename with `_Log` suffix:
+- Format: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}_Log.md`
+- Location: `.claude/logs/`
+- Example: `0004_Feature_Development_Log_Creation_Workflow_Log.md`
+
 ## Important Notes
 
+### For Plans
 - Plans enable work resumption after interruptions
 - Any developer should be able to execute tasks
 - Preserve completed checkboxes when updating
@@ -132,3 +186,12 @@ Plans must match their ticket filename with `_Plan` suffix:
 - Document design decisions with rationale
 - Include testing in task breakdown
 - Consider future enhancements but keep them out of scope
+
+### For Logs
+- **Create logs AFTER implementation, not before**
+- Logs document reality, plans document intention
+- Focus on what actually happened, not what was planned
+- Document deviations and the reasons behind them
+- Include lessons learned for future reference
+- Logs are valuable for knowledge sharing and onboarding
+- Be honest about issues encountered and resolutions
