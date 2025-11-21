@@ -61,7 +61,7 @@ Convert a raw note or request into a structured ticket.
    - `{{USER_STORY}}`: User story description
    - `{{ACCEPTANCE_CRITERIA}}`: Bullet list of acceptance criteria
    - `{{INITIAL_REQUEST}}`: Original request text
-7. Create the ticket file in `.claude/backlog/3_To_Plan/` with filename: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}.md`
+7. Create the ticket file in `.claude/backlog/1_WIP/` with filename: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}.md`
 
 ### 3. Update Ticket
 
