@@ -82,10 +82,30 @@ Update fields in an existing ticket.
 Mark a ticket as complete and move it to the Done folder.
 
 **Steps:**
-1. Locate the ticket file
-2. Update the `Status` field to `0_Done`
-3. Update the `Updated` date to current date
-4. Move the ticket file from its current location to `.claude/backlog/0_Done/`
+1. **Locate the ticket**
+   - Find ticket by ID or filename in `.claude/backlog/`
+   - Determine current folder location
+   - Read current ticket content
+
+2. **Verify ticket is ready to close**
+   - Check that acceptance criteria are met (optional but recommended)
+   - Confirm implementation is complete
+   - Verify development log exists (if applicable)
+
+3. **Update ticket metadata**
+   - Update `Status` field to `0_Done`
+   - Update `Updated` date to current date in ISO format (YYYY-MM-DD)
+   - Preserve all other fields and content
+
+4. **Move ticket to Done folder**
+   - Move ticket file from current location to `.claude/backlog/0_Done/`
+   - Maintain same filename
+   - Verify the move was successful
+
+5. **Confirm closure**
+   - Verify ticket now exists in `0_Done/` folder
+   - Confirm ticket no longer exists in original location
+   - Report completion to user
 
 ## Important Notes
 
