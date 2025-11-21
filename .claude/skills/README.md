@@ -40,15 +40,84 @@ Tickets use a structured markdown format with frontmatter containing:
 
 Example: `0001_Feature_User_Authentication.md`
 
+---
+
+### Solution Design
+
+**Location**: [solution-design/](solution-design/)
+
+**Purpose**: Provides workflows for creating comprehensive execution plans that break down complex features into manageable tasks.
+
+**Workflows**:
+
+1. **Create Execution Plan** - Analyzes tickets and generates detailed implementation plans
+2. **Update Plan** - Modifies existing plans while preserving progress
+3. **Create Development Log** - Documents completed work and implementation details
+
+**Plan Structure**:
+- YAML frontmatter with metadata
+- Overview and analysis sections
+- Solution approach and architecture
+- Phased task breakdown with checkboxes
+- Dependencies and testing strategy
+
+**Templates**:
+- [solution-design/templates/plan-template.md](solution-design/templates/plan-template.md)
+- [solution-design/templates/log-template.md](solution-design/templates/log-template.md)
+
+**Plan Naming Convention**: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}_Plan.md`
+
+**Log Naming Convention**: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}_Log.md`
+
+---
+
+### Stakeholder Management
+
+**Location**: [stakeholder-management/](stakeholder-management/)
+
+**Purpose**: Provides workflows for managing stakeholder information and interaction logs through structured markdown files.
+
+**Workflows**:
+
+1. **Create Stakeholder** - Add new stakeholders with contact information
+2. **Update Stakeholder Information** - Modify contact details
+3. **Log Interaction** - Record dated interactions with stakeholders
+4. **List Stakeholders** - Display all stakeholders in organized format
+5. **Search Stakeholders** - Find stakeholders by name, company, or role
+6. **Retrieve Interaction Log** - View complete interaction history
+7. **Delete Stakeholder** - Remove stakeholders with confirmation
+
+**Stakeholder File Structure**:
+- Contact information (name, company, role, email, phone)
+- Interaction log with date-based entries (YYYY-MM-DD format)
+- Reverse chronological order (newest first)
+
+**Template**: [stakeholder-management/templates/stakeholder-template.md](stakeholder-management/templates/stakeholder-template.md)
+
+**Stakeholder Naming Convention**: `familyname_firstname.md` (lowercase with underscores)
+
+**Storage Location**: `.claude/stakeholders/`
+
+Example: `mueller_anna.md`
+
 ## Skill Directory Structure
 
 ```
 .claude/skills/
 ├── README.md                                    # This file
-└── backlog-management/
+├── backlog-management/
+│   ├── skill.md                                 # Skill definition
+│   └── templates/
+│       └── ticket-template.md                   # Ticket template
+├── solution-design/
+│   ├── skill.md                                 # Skill definition
+│   └── templates/
+│       ├── plan-template.md                     # Plan template
+│       └── log-template.md                      # Development log template
+└── stakeholder-management/
     ├── skill.md                                 # Skill definition
     └── templates/
-        └── ticket-template.md                   # Ticket template
+        └── stakeholder-template.md              # Stakeholder template
 ```
 
 ## Creating New Skills

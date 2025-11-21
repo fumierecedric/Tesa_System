@@ -83,13 +83,59 @@ Each plan includes:
 - Dependencies and testing strategy
 - Implementation guidance
 
+### HR Agent
+
+**File**: [hr.md](hr.md)
+
+**Purpose**: Manages stakeholder information and maintains comprehensive records of all interactions and key information.
+
+**Skills**:
+- Stakeholder Management
+
+**Use Cases**:
+- Creating new stakeholder files
+- Updating stakeholder contact information
+- Logging interactions with stakeholders
+- Searching for stakeholders by name, company, or role
+- Retrieving interaction history
+- Managing stakeholder lifecycle
+
+**How to Use**:
+
+The HR agent manages stakeholder files in `.claude/stakeholders/`. When you need to work with stakeholders:
+
+1. Provide stakeholder information (name, company, role, contact details)
+2. Agent creates or updates stakeholder files using standardized template
+3. Log interactions with date-based entries
+4. Search and retrieve stakeholder information as needed
+
+**Example Interactions**:
+
+```
+"Add a new stakeholder: Jane Smith, XYZ Inc, CTO, jane.smith@xyz.com"
+"Log interaction with John Doe: Discussed Q4 budget allocation"
+"Search for stakeholders at Tesa SE"
+"Show me the interaction log for Anna Mueller"
+"Update Jane Smith's phone number to +1-555-0199"
+```
+
+**Output**:
+
+Stakeholder files are saved to `.claude/stakeholders/` with naming format: `familyname_firstname.md`
+
+Each stakeholder file includes:
+- Contact information (name, company, role, email, phone)
+- Interaction log with date-based entries
+- Professional interaction history tracking
+
 ## Agent Directory Structure
 
 ```
 .claude/agents/
 ├── README.md              # This file
 ├── product-owner.md       # Product Owner agent configuration
-└── solution-designer.md   # Solution Designer agent configuration
+├── solution-designer.md   # Solution Designer agent configuration
+└── hr.md                  # HR agent configuration
 ```
 
 ## Workflow Integration

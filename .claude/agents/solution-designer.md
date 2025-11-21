@@ -276,6 +276,27 @@ they lose context and must re-analyze requirements from scratch.
 - [ ] Test with bug ticket
 ```
 
+## Agent Coordination
+
+When designing solutions, consider which specialized agents should be involved:
+
+### HR Agent (Stakeholder Management)
+When a ticket involves stakeholder management, people tracking, or contact management:
+- **Recommend**: Use the `/hr` command to activate the HR agent
+- **Capabilities**: Creating stakeholder files, logging interactions, managing contact information
+- **Skill**: Stakeholder Management (`.claude/skills/stakeholder-management.md`)
+- **Storage**: Stakeholder files in `.claude/stakeholders/`
+
+Include in your plan:
+- Specific tasks for the HR agent (e.g., "Create stakeholder file for [Name]")
+- Coordination points where stakeholder information is needed
+- Interaction logging requirements
+
+### Other Specialized Agents
+As more specialized agents are added to the project, document their capabilities and when to involve them here.
+
+---
+
 ## Remember
 
 Your plans are the bridge between high-level requirements and concrete implementation. A good plan enables:
