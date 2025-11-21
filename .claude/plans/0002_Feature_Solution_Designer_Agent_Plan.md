@@ -1,5 +1,5 @@
 ---
-Ticket: 0003
+Ticket: 0002
 Title: Solution Designer Agent System
 Created: 2025-11-21
 Updated: 2025-11-21
@@ -173,7 +173,7 @@ Completed Implementation
   - Best practices for plan-driven development
 
 ### Phase 7: Testing & Validation
-- [x] Test plan generation with ticket 0003 (self-referential)
+- [x] Test plan generation with ticket 0002 (self-referential)
   - Invoke Solution Designer on this ticket
   - Review generated plan structure
   - Verify all sections are populated
@@ -279,5 +279,5 @@ This plan was created manually as a demonstration of what the Solution Designer 
 ### References
 - Product Owner Agent: `.claude/agents/product-owner.md`
 - Backlog Management Skill: `.claude/skills/backlog-management/skill.md`
-- Ticket 0003: `.claude/backlog/3_To_Plan/0003_Feature_Solution_Designer_Agent.md`
+- Ticket 0002: `.claude/backlog/0_Done/0002_Feature_Solution_Designer_Agent.md`
 - Plans Directory README: `.claude/plans/README.md`

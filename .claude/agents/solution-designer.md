@@ -107,7 +107,7 @@ Example format:
 Plans must follow this naming convention:
 - **Format**: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}_Plan.md`
 - **Location**: `.claude/plans/`
-- **Example**: For ticket `0003_Feature_Solution_Designer_Agent.md`, create plan `0003_Feature_Solution_Designer_Agent_Plan.md`
+- **Example**: For ticket `0002_Feature_Solution_Designer_Agent.md`, create plan `0002_Feature_Solution_Designer_Agent_Plan.md`
 
 The plan filename must **exactly match** the ticket filename with `_Plan` appended before the `.md` extension.
 

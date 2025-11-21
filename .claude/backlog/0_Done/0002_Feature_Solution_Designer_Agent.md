@@ -1,6 +1,6 @@
 ---
 Epic: Project Management
-Id: 0003
+Id: 0002
 Title: Solution Designer Agent System
 Type: Feature
 Status: 0_Done
@@ -37,7 +37,7 @@ The Solution Designer should:
   - [x] Task dependencies and sequencing
   - [x] Checkboxes for each task to track completion
 - [x] Plans are stored in `.claude/plans/` directory
-- [x] Plan filename matches ticket filename with `_Plan` suffix: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}_Plan.md` (e.g., `0003_Feature_Solution_Designer_Agent_Plan.md`)
+- [x] Plan filename matches ticket filename with `_Plan` suffix: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}_Plan.md` (e.g., `0002_Feature_Solution_Designer_Agent_Plan.md`)
 - [x] Plan template with standardized structure created
 - [x] Agent can update existing plans when requirements change
 - [x] Plans are formatted for easy reading and tracking by both humans and AI agents
@@ -116,9 +116,8 @@ Status: In Progress
 │   ├── 4_Wait/
 │   └── 5_Archive/
 ├── plans/
-│   ├── 0001_Feature_X_Plan.md
-│   ├── 0002_Feature_Y_Plan.md
-│   └── 0003_Feature_Solution_Designer_Agent_Plan.md
+│   ├── 0001_Feature_Product_Owner_Plan.md
+│   └── 0002_Feature_Solution_Designer_Agent_Plan.md
 └── skills/
     └── solution-design/
 ```

@@ -105,7 +105,7 @@ Every plan must include these sections:
 Plans must match their ticket filename with `_Plan` suffix:
 - Format: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}_Plan.md`
 - Location: `.claude/plans/`
-- Example: `0003_Feature_Solution_Designer_Agent_Plan.md`
+- Example: `0002_Feature_Solution_Designer_Agent_Plan.md`
 
 ## Task Writing Guidelines
 
