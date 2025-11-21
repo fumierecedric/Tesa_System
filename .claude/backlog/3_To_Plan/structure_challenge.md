@@ -1,0 +1,1 @@
+- create a readme taht strfuctures the folder with minto
