@@ -1,3 +1,46 @@
+---
+Epic: Project Management
+Id: 0001
+Title: Product Owner Agent System
+Type: Feature
+Status: 0_Done
+Created: 2025-11-21
+Updated: 2025-11-21
+Priority: Critical
+Sprint:
+---
+
+## Summary
+
+Create a Product Owner Agent system with Backlog Management capabilities to manage product tickets in `.claude/backlog/` directory. The system includes agent configuration, skills, templates, and workflows for creating, updating, and closing tickets.
+
+## User Story
+
+As a project manager, I need a Product Owner agent that can help me manage the product backlog efficiently, so that I can create well-structured tickets, track work items, and maintain organized project documentation without manual overhead.
+
+The PO should leverage reusable skills and interact with me to gather necessary information, asking clarifying questions to ensure tickets are properly defined before creation.
+
+## Acceptance Criteria
+
+- [x] Product Owner Agent configuration created in `.claude/agents/`
+- [x] Agent setup is lightweight, leveraging Skills for workflows
+- [x] Backlog Management skill created in `.claude/skills/`
+- [x] Backlog folder structure initialized (0_Done, 1_WIP, 2_To_Do, 3_To_Plan, 4_Wait, 5_Archive)
+- [x] Initialize Backlog workflow implemented
+- [x] Prepare Ticket workflow implemented with:
+  - [x] Auto-incrementing 4-digit ticket IDs (0001, 0002, etc.)
+  - [x] Ticket template with all required fields (Epic, Id, Title, Type, Status, Dates, Priority, Sprint, Summary, User Story, Acceptance Criteria, Initial Request)
+  - [x] Default behavior to look in `2_To_Do/` folder for raw notes
+  - [x] Interactive prompts for Epic, Type, Priority, and Sprint
+- [x] Update Ticket workflow implemented
+- [x] Close Ticket workflow implemented (updates status and moves to 0_Done/)
+- [x] PO agent asks clarifying questions before creating/updating tickets
+- [x] Complete documentation for PO agent and Backlog Management skill
+- [x] Template stored in `.claude/skills/backlog-management/templates/`
+- [x] Ticket naming convention: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}.md`
+
+## Initial Request
+
 - Create a Product Owner Agent (short name: PO)
 - Store the agent configuration in `.claude/agents/`
 - The PO will be responsible for managing the product backlog in `/.claude/backlog/`, that is the "tickets"
