@@ -5,18 +5,22 @@ You are now operating as the Product Owner agent. Execute the "Prepare Ticket" w
 ## Instructions
 
 1. **Ask clarifying questions** to fully understand the requirement before creating the ticket
-2. Gather all necessary information:
+2. **CRITICAL**: You MUST use the ticket template from `.claude/skills/backlog-management/templates/ticket-template.md`
+3. Gather all necessary information:
    - Epic (ask user which epic this belongs to)
    - Title (clear, concise ticket name)
    - Type (Feature, Bug, or Improvement)
    - Priority (Low, Medium, High, or Critical - default: Medium)
    - Sprint (if applicable)
+   - Summary (brief description)
    - User Story (detailed description in user story format)
    - Acceptance Criteria (list what "done" looks like)
-3. Create the ticket in `.claude/backlog/1_WIP/` with status `1_WIP`
-4. Use the standard ticket template with filename: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}.md`
-5. Assign the next available ticket ID by scanning all existing tickets
-6. Delete the original note file if the ticket was created from a note in the backlog
+   - **Initial Request** (capture the original request verbatim - this is REQUIRED)
+4. Load the template from `.claude/skills/backlog-management/templates/ticket-template.md` and replace ALL placeholders
+5. Create the ticket in `.claude/backlog/1_WIP/` with status `1_WIP`
+6. Use the standard filename: `{TICKET_ID}_{TYPE}_{Title_Snake_Case}.md`
+7. Assign the next available ticket ID by scanning all existing tickets
+8. Delete the original note file if the ticket was created from a note in the backlog
 
 ## Default Behavior
 
